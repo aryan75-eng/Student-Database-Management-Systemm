@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8"
+    tools:context=".Page_2">
+
+    <TextView
+        android:id="@+id/txtPage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Database"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#253A87"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintTop_toBottomOf="@id/txtPage2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="580dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:padding="20dp">
+
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:background="@drawable/edittext_design"
+            android:padding="12dp"/>
+
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_design"
+            android:padding="12dp"
+            android:layout_marginTop="4dp"/>
+
+        <EditText
+            android:id="@+id/etUID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="UID"
+            android:inputType="number"
+            android:background="@drawable/edittext_design"
+            android:padding="12dp"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="➕  Add Student"
+            android:background="@drawable/button_design"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📖   View Data"
+            android:background="@drawable/button_design"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="3dp"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_design"
+            android:text="✏️  Update Data"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🗑️  Delete Data"
+            android:background="@drawable/button_design"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="3dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
