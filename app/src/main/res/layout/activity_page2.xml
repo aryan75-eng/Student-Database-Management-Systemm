@@ -41,43 +41,6 @@
         android:padding="20dp">
 
 
-        <EditText
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:background="@drawable/edittext_design"
-            android:padding="12dp"/>
-
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:background="@drawable/edittext_design"
-            android:padding="12dp"
-            android:layout_marginTop="4dp"/>
-
-        <EditText
-            android:id="@+id/etUID"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="UID"
-            android:inputType="number"
-            android:background="@drawable/edittext_design"
-            android:padding="12dp"
-            android:layout_marginTop="4dp"/>
-
-        <Button
-            android:id="@+id/btnSubmit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="➕  Add Student"
-            android:background="@drawable/button_design"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="15dp"/>
 
         <Button
             android:id="@+id/btnView"
