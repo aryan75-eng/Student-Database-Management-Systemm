@@ -1,8 +1,8 @@
-# 📱 Student Database Management Android App
+# 📱 Student Database Management Android App (Firebase)
 
-An Android application developed using **Kotlin and XML** that provides user registration, login authentication, and student record management using SQLite Database.
+An Android application developed using **Kotlin and XML** that provides user registration, login authentication, and student record management using **Firebase Realtime Database**.
 
-This project demonstrates Android concepts like Activity Navigation, SQLite Database CRUD operations, custom UI designing, and dialog implementation.
+This project demonstrates Android concepts like Activity Navigation, Firebase integration, cloud database operations, custom UI designing, and CRUD functionality.
 
 ---
 
@@ -15,43 +15,66 @@ This project demonstrates Android concepts like Activity Navigation, SQLite Data
   - Email
   - Password
 
-- Registration details are stored in SQLite Database.
+- Registration details are stored in Firebase Realtime Database.
+- Provides real-time cloud data storage.
 - Shows successful registration message after submitting the form.
 
 ---
 
 ## 🔑 Login Authentication
 
-- User login with username and password.
-- Login credentials are verified from SQLite Database.
-- Incorrect username or password prevents login.
-- Only registered users can access the Student Database page.
+- User login using username and password.
+- Login details are verified from stored database records.
+- Incorrect credentials prevent unauthorized access.
+- Successfully logged-in users can access the Student Database Dashboard.
 
 ---
 
 # 📚 Student Database Management
 
-After successful login, user can manage stored records.
+After successful login, users can manage student records.
 
 Features:
 
+---
+
+## ➕ Insert Data
+
+- Add new student information.
+- Data gets stored securely in Firebase Realtime Database.
+
+---
+
 ## 📖 View Data
 
-- Displays saved user/student records.
-- Uses custom popup dialog to show database records.
+- Retrieve and display stored student records.
+- Fetches real-time data from Firebase.
 
 ---
 
 ## ✏️ Update Data
 
-- Allows updating existing records.
-- User can modify stored information.
+- Allows updating existing student information.
+- Modified data is updated directly in Firebase Database.
 
 ---
 
 ## 🗑️ Delete Data
 
-- Deletes selected records permanently from SQLite Database.
+- Removes selected student records permanently from Firebase Realtime Database.
+
+---
+
+# 🔥 Firebase Integration
+
+Firebase Realtime Database is used for storing and managing application data.
+
+Firebase provides:
+
+✔ Cloud Database Storage  
+✔ Real-time Data Synchronization  
+✔ Online Data Access  
+✔ Secure Data Management  
 
 ---
 
@@ -60,10 +83,11 @@ Features:
 - Kotlin
 - XML
 - Android Studio
-- SQLite Database
+- Firebase Realtime Database
+- Firebase Console
 - Android Activities
 - Intent Navigation
-- Custom Dialog Box
+- Material Design Components
 
 ---
 
@@ -77,8 +101,8 @@ app
 │
 ├── Registration_Pagee.kt
 ├── LoginActivity.kt
-├── Page_2.kt
-└── DBHelper.kt
+├── PageActivity2.kt
+└── google-services.json
 
 
 res/layout
@@ -86,22 +110,25 @@ res/layout
 ├── activity_registration_pagee.xml
 ├── activity_login.xml
 ├── activity_page2.xml
-├── dialog_student_records.xml
 ```
 
 ---
 
-# 🗄️ Database
+# 🗄️ Database Structure
 
-SQLite Database is used for storing and managing user information.
+Firebase Realtime Database stores data in JSON format.
 
-Database Operations:
+Example:
 
-✔ Insert Data  
-✔ View Data  
-✔ Update Data  
-✔ Delete Data  
-✔ Login Verification  
+```
+Users
+
+ └── Username
+
+      ├── username : Aryan
+      ├── email : aryan@gmail.com
+      └── password : 12345
+```
 
 ---
 
@@ -112,7 +139,7 @@ Registration Page
 
 ↓
 
-User Details Stored in SQLite Database
+User Details Stored in Firebase Realtime Database
 
 ↓
 
@@ -120,7 +147,7 @@ Login Page
 
 ↓
 
-Authentication Check
+Authentication Verification
 
 ↓
 
@@ -128,7 +155,7 @@ Student Database Dashboard
 
 ↓
 
-View / Update / Delete Records
+Insert / View / Update / Delete Records
 
 
 ---
@@ -143,9 +170,13 @@ git clone repository-link
 
 2. Open the project in Android Studio.
 
-3. Sync Gradle files.
+3. Connect project with Firebase.
 
-4. Run on Emulator or Android Device.
+4. Add google-services.json file.
+
+5. Sync Gradle files.
+
+6. Run the application on Emulator or Android Device.
 
 ---
 
@@ -153,13 +184,15 @@ git clone repository-link
 
 This project helped to understand:
 
-- Android Activity Lifecycle
+- Android App Development
 - Kotlin Programming
 - XML UI Designing
-- Intent Navigation
-- SQLite Database Connectivity
+- Firebase Integration
+- Firebase Realtime Database
+- Cloud Database Connectivity
 - CRUD Operations
-- Login Authentication
+- Activity Navigation
+- Gradle Configuration
 
 ---
 
